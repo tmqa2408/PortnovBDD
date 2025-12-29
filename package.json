@@ -1,0 +1,26 @@
+{
+  "name": "portnovbdd",
+  "version": "1.0.0",
+  "description": "The goal of this project is to setup a baseline project to start using Playwright with Cucumber. I will describe the steps to setup the project and the steps to run the tests. Also some guidelines to follow to make the project more maintainable.",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "cucumber-js --config config/cucumber.js & npx cucumber-js --format json:reports/cucumber_report.json",
+    "cucumber": "cucumber-js --config config/cucumber.js",
+    "report": "npx cucumber-js --format json:reports/cucumber_report.json",
+    "test:smoke": "cucumber-js --tags \"@smoke\""
+  },
+  "devDependencies": {
+    "@cucumber/cucumber": "^12.5.0",
+    "@playwright/test": "^1.57.0",
+    "@types/node": "^25.0.3",
+    "cucumber-html-reporter": "^6.0.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.3"
+  }
+}

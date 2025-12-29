@@ -1,0 +1,462 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "to-test-home-page;i-validate-elements-on-home-page",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "I validate elements on home page",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1215341457
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "User is on home page",
+            "match": {
+              "location": "steps/homepage.steps.ts:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1323150792
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 5,
+            "name": "User can see a topic block title",
+            "match": {
+              "location": "steps/homepage.steps.ts:20"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 5003635916,
+              "error_message": "Error: function timed out, ensure the promise resolves within 5000 milliseconds\n    at Timeout.<anonymous> (/Users/mt/Proj/Playwright/PortnovBDD/node_modules/@cucumber/cucumber/src/time.ts:52:14)\n    at listOnTimeout (node:internal/timers:581:17)\n    at processTimers (node:internal/timers:519:7)"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 256983667
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "to-test-home-page;verify-shearch-functionality",
+        "keyword": "Scenario",
+        "line": 8,
+        "name": "Verify Shearch functionality",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 480355165
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 9,
+            "name": "User is on home page",
+            "match": {
+              "location": "steps/homepage.steps.ts:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1282653582
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "Shearch button should be valisible",
+            "match": {
+              "location": "steps/homepage.steps.ts:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 25279959
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 11,
+            "name": "User fills \"Test\" in the search field",
+            "match": {
+              "location": "steps/homepage.steps.ts:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 14978833
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 12,
+            "name": "click on the Search button",
+            "match": {
+              "location": "steps/homepage.steps.ts:29"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 164544458
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 96706250
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "to-test-home-page",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "To test home page",
+    "tags": [],
+    "uri": "features/homepage/homepage.feature"
+  },
+  {
+    "description": "  As a new user\n  I want to register for an account\n  So that I can shop and track my orders on the nopCommerce store",
+    "elements": [
+      {
+        "description": "",
+        "id": "user-registration;successfully-navigate-to-registration-page-from-homepage",
+        "keyword": "Scenario",
+        "line": 10,
+        "name": "Successfully navigate to registration page from homepage",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 591514042
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "User is on home page",
+            "match": {
+              "location": "steps/homepage.steps.ts:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1214235667
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 11,
+            "name": "I am on the registration page",
+            "match": {
+              "location": "steps/registration.steps.ts:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 838613250
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 12,
+            "name": "I should see the registration form",
+            "match": {
+              "location": "steps/registration.steps.ts:45"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 15829250
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 90784416
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@smoke",
+            "line": 9
+          },
+          {
+            "name": "@registration",
+            "line": 9
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "user-registration;register-with-valid-mandnatory-fields",
+        "keyword": "Scenario",
+        "line": 15,
+        "name": "Register with valid mandnatory fields",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 490134417
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "User is on home page",
+            "match": {
+              "location": "steps/homepage.steps.ts:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1386512874
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 16,
+            "name": "I am on the registration page",
+            "match": {
+              "location": "steps/registration.steps.ts:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 937337917
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 17,
+            "name": "I select Male as gender",
+            "match": {
+              "location": "steps/registration.steps.ts:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 51649958
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 18,
+            "name": "I enter \"John\" as first name",
+            "match": {
+              "location": "steps/registration.steps.ts:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 45889209
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 19,
+            "name": "I enter \"Doe\" as last name",
+            "match": {
+              "location": "steps/registration.steps.ts:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 11182041
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 20,
+            "name": "I enter \"john.doe@example.com\" as email",
+            "match": {
+              "location": "steps/registration.steps.ts:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3854458
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 21,
+            "name": "I enter \"ValidPass123!\" as password",
+            "match": {
+              "location": "steps/registration.steps.ts:29"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6514166
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 22,
+            "name": "I enter \"ValidPass123!\" as confirm password",
+            "match": {
+              "location": "steps/registration.steps.ts:33"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3814834
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 23,
+            "name": "I click on the Register button",
+            "match": {
+              "location": "steps/registration.steps.ts:37"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 132001916
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 104588665
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@smoke",
+            "line": 14
+          },
+          {
+            "name": "@registration",
+            "line": 14
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "user-registration",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "User Registration",
+    "tags": [],
+    "uri": "features/homepage/registration.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "login-page-validation;verify-login-success",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Verify login success",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 474393874
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I am on the login page",
+            "match": {
+              "location": "steps/login.steps.ts:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1259075084
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "I login with valid credentials",
+            "match": {
+              "location": "steps/login.steps.ts:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 120891292
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "verify that the login is success",
+            "match": {
+              "location": "steps/login.steps.ts:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 12989291
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 70886125
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "login-page-validation",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Login page validation",
+    "tags": [],
+    "uri": "features/loginpage/login.feature"
+  }
+]
