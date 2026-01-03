@@ -14,7 +14,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 1215341457
+              "duration": 1329634749
             }
           },
           {
@@ -27,7 +27,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1323150792
+              "duration": 2379596750
             }
           },
           {
@@ -36,12 +36,11 @@
             "line": 5,
             "name": "User can see a topic block title",
             "match": {
-              "location": "steps/homepage.steps.ts:20"
+              "location": "steps/homepage.steps.ts:21"
             },
             "result": {
-              "status": "failed",
-              "duration": 5003635916,
-              "error_message": "Error: function timed out, ensure the promise resolves within 5000 milliseconds\n    at Timeout.<anonymous> (/Users/mt/Proj/Playwright/PortnovBDD/node_modules/@cucumber/cucumber/src/time.ts:52:14)\n    at listOnTimeout (node:internal/timers:581:17)\n    at processTimers (node:internal/timers:519:7)"
+              "status": "passed",
+              "duration": 9175374
             }
           },
           {
@@ -49,7 +48,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 256983667
+              "duration": 105054250
             }
           }
         ],
@@ -68,7 +67,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 480355165
+              "duration": 683320082
             }
           },
           {
@@ -81,20 +80,20 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1282653582
+              "duration": 1744912166
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
             "line": 10,
-            "name": "Shearch button should be valisible",
+            "name": "Search button should be visible",
             "match": {
-              "location": "steps/homepage.steps.ts:16"
+              "location": "steps/homepage.steps.ts:17"
             },
             "result": {
               "status": "passed",
-              "duration": 25279959
+              "duration": 16000750
             }
           },
           {
@@ -103,11 +102,11 @@
             "line": 11,
             "name": "User fills \"Test\" in the search field",
             "match": {
-              "location": "steps/homepage.steps.ts:25"
+              "location": "steps/homepage.steps.ts:26"
             },
             "result": {
               "status": "passed",
-              "duration": 14978833
+              "duration": 10347165
             }
           },
           {
@@ -116,11 +115,11 @@
             "line": 12,
             "name": "click on the Search button",
             "match": {
-              "location": "steps/homepage.steps.ts:29"
+              "location": "steps/homepage.steps.ts:30"
             },
             "result": {
               "status": "passed",
-              "duration": 164544458
+              "duration": 1540342792
             }
           },
           {
@@ -128,7 +127,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 96706250
+              "duration": 95043792
             }
           }
         ],
@@ -158,7 +157,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 591514042
+              "duration": 537860832
             }
           },
           {
@@ -171,7 +170,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1214235667
+              "duration": 1779506792
             }
           },
           {
@@ -184,7 +183,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 838613250
+              "duration": 947985457
             }
           },
           {
@@ -197,7 +196,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 15829250
+              "duration": 587417
             }
           },
           {
@@ -205,7 +204,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 90784416
+              "duration": 89071416
             }
           }
         ],
@@ -233,7 +232,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 490134417
+              "duration": 650090792
             }
           },
           {
@@ -246,7 +245,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1386512874
+              "duration": 1722569666
             }
           },
           {
@@ -259,7 +258,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 937337917
+              "duration": 919168625
             }
           },
           {
@@ -272,7 +271,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 51649958
+              "duration": 30224625
             }
           },
           {
@@ -285,7 +284,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 45889209
+              "duration": 39753125
             }
           },
           {
@@ -298,7 +297,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 11182041
+              "duration": 9714874
             }
           },
           {
@@ -311,7 +310,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 3854458
+              "duration": 3990625
             }
           },
           {
@@ -324,7 +323,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 6514166
+              "duration": 7190458
             }
           },
           {
@@ -337,7 +336,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 3814834
+              "duration": 4902917
             }
           },
           {
@@ -350,7 +349,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 132001916
+              "duration": 96031124
             }
           },
           {
@@ -358,7 +357,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 104588665
+              "duration": 82708957
             }
           }
         ],
@@ -397,7 +396,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 474393874
+              "duration": 559911374
             }
           },
           {
@@ -406,11 +405,11 @@
             "line": 4,
             "name": "I am on the login page",
             "match": {
-              "location": "steps/login.steps.ts:7"
+              "location": "steps/login.steps.ts:9"
             },
             "result": {
               "status": "passed",
-              "duration": 1259075084
+              "duration": 1255597041
             }
           },
           {
@@ -419,11 +418,11 @@
             "line": 5,
             "name": "I login with valid credentials",
             "match": {
-              "location": "steps/login.steps.ts:13"
+              "location": "steps/login.steps.ts:14"
             },
             "result": {
               "status": "passed",
-              "duration": 120891292
+              "duration": 482298917
             }
           },
           {
@@ -432,11 +431,11 @@
             "line": 6,
             "name": "verify that the login is success",
             "match": {
-              "location": "steps/login.steps.ts:18"
+              "location": "steps/login.steps.ts:19"
             },
             "result": {
               "status": "passed",
-              "duration": 12989291
+              "duration": 23982832
             }
           },
           {
@@ -444,7 +443,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 70886125
+              "duration": 81232500
             }
           }
         ],
@@ -458,5 +457,231 @@
     "name": "Login page validation",
     "tags": [],
     "uri": "features/loginpage/login.feature"
+  },
+  {
+    "description": "  As a user\n  I want to access and manage my wishlist\n  So that I can save items I'm interested in purchasing later",
+    "elements": [
+      {
+        "description": "",
+        "id": "wishlist-functionality;navigate-to-wishlist-from-homepage-when-not-logged-in",
+        "keyword": "Scenario",
+        "line": 10,
+        "name": "Navigate to wishlist from homepage when not logged in",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 471765250
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I am on the nopCommerce homepage",
+            "match": {
+              "location": "steps/wishlist.steps.ts:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1738036416
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 11,
+            "name": "I am not logged in",
+            "match": {
+              "location": "steps/wishlist.steps.ts:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4997500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 12,
+            "name": "I click on the \"Wishlist (0)\" link in the header",
+            "match": {
+              "location": "steps/wishlist.steps.ts:65"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2022257625
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 13,
+            "name": "I should be redirected to the wishlist page",
+            "match": {
+              "location": "steps/wishlist.steps.ts:72"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2812459
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 14,
+            "name": "the wishlist page URL should contain \"/wishlist\"",
+            "match": {
+              "location": "steps/wishlist.steps.ts:77"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 387042
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 15,
+            "name": "I should see the wishlist page",
+            "match": {
+              "location": "steps/wishlist.steps.ts:81"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 23929040
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 105433750
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@smoke",
+            "line": 9
+          },
+          {
+            "name": "@wishlist",
+            "line": 9
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "wishlist-functionality;navigate-to-wishlist-from-homepage-when-logged-in",
+        "keyword": "Scenario",
+        "line": 18,
+        "name": "Navigate to wishlist from homepage when logged in",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 480474249
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I am on the nopCommerce homepage",
+            "match": {
+              "location": "steps/wishlist.steps.ts:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1683382374
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 19,
+            "name": "I am logged in",
+            "match": {
+              "location": "steps/wishlist.steps.ts:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1435295582
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 20,
+            "name": "I click on the \"Wishlist\" link in the header",
+            "match": {
+              "location": "steps/wishlist.steps.ts:65"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1441322667
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 21,
+            "name": "I should be redirected to the wishlist page",
+            "match": {
+              "location": "steps/wishlist.steps.ts:72"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1811083
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 22,
+            "name": "I should see my wishlist items if any exist",
+            "match": {
+              "location": "steps/wishlist.steps.ts:113"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 19228291
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 86765749
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@smoke",
+            "line": 17
+          },
+          {
+            "name": "@wishlist",
+            "line": 17
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "wishlist-functionality",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Wishlist Functionality",
+    "tags": [],
+    "uri": "features/wishlistpage/wishlist.feature"
   }
 ]

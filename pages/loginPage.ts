@@ -1,21 +1,26 @@
 import { Page } from "@playwright/test";
-import { baseURL } from "../corlib/basepage";
+// import dotenv from "dotenv";
+// dotenv.config();
+const email = process.env.LOGIN_EMAIL || "";
+const password = process.env.LOGIN_PASSWORD || "";
+const baseURL = process.env.BASE_URL || "";
 
 export default class LoginPage {
   constructor(private page: Page) {}
 
   async open() {
-    if (!baseURL) throw new Error("BASE_URL is not defined");
     await this.page.goto(`${baseURL}/login`);
   }
 
-  async login(email: string, password: string) {
-    await this.page.fill("#Email", email);
-    await this.page.fill("#Password", password);
+  async login(loginEmail: string = email, loginPassword: string = password) {
+    await this.page.fill("#Email", loginEmail);
+    await this.page.fill("#Password", loginPassword);
     await this.page.click("button[type='submit']");
+    // Wait for login to complete
+    await this.page.waitForLoadState('networkidle');
   }
 
-  async getTitle() {
-    return await this.page.title();
+  get getTitle() {
+    return this.page.title();
   }
 }

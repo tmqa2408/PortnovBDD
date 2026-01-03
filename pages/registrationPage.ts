@@ -3,13 +3,12 @@ import { Page, expect } from "@playwright/test";
 export default class RegistrationPage {
   constructor(private readonly page: Page) {}
 
-  async gotoRegisterPage() {
+  async goto() {
     await this.page.goto(`${process.env.BASE_URL}/register`);
   }
 
   async registrationFormIsVisible() {
-    const form = this.page.locator("(//div[@class='form-fields'])[1]");
-    await expect(form).toBeVisible();
+    await this.page.locator("(//div[@class='form-fields'])[1]");
   }
 
   async selectGenderMale() {
@@ -21,15 +20,21 @@ export default class RegistrationPage {
   }
 
   async enterDateOfBirthMonth(month: string) {
-    await this.page.locator('select[name="DateOfBirthMonth"]').selectOption(month);
+    await this.page
+      .locator('select[name="DateOfBirthMonth"]')
+      .selectOption(month);
   }
 
   async enterDateOfBirthYear(year: string) {
-    await this.page.locator('select[name="DateOfBirthYear"]').selectOption(year);
+    await this.page
+      .locator('select[name="DateOfBirthYear"]')
+      .selectOption(year);
   }
 
   async fillFirstAndLastName(firstName: string, lastName: string) {
-    await this.page.getByRole("textbox", { name: "First name:" }).fill(firstName);
+    await this.page
+      .getByRole("textbox", { name: "First name:" })
+      .fill(firstName);
     await this.page.getByRole("textbox", { name: "Last name:" }).fill(lastName);
   }
 
@@ -38,11 +43,15 @@ export default class RegistrationPage {
   }
 
   async enterPassword(password: string) {
-    await this.page.getByRole("textbox", { name: "Password:", exact: true }).fill(password);
+    await this.page
+      .getByRole("textbox", { name: "Password:", exact: true })
+      .fill(password);
   }
 
   async enterConfirmPassword(password: string) {
-    await this.page.getByRole("textbox", { name: "Confirm password:" }).fill(password);
+    await this.page
+      .getByRole("textbox", { name: "Confirm password:" })
+      .fill(password);
   }
 
   async clickRegisterButton() {
@@ -50,7 +59,9 @@ export default class RegistrationPage {
   }
 
   async checkErrorMessage(expectedText?: string) {
-    const error = this.page.locator("//div[@class='message-error validation-summary-errors']//li[1]");
+    const error = this.page.locator(
+      "//div[@class='message-error validation-summary-errors']//li[1]"
+    );
     if (expectedText) {
       await expect(error).toHaveText(expectedText);
     } else {

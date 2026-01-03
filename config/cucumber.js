@@ -1,33 +1,21 @@
-// config/cucumber.js
 module.exports = {
   default: {
-    paths: [
-      "features/**/*.feature"
-    ],
-
+    paths: ['features/**/*.feature'],
     dryRun: false,
-
-    require: [
-      "steps/**/*.ts",
-      "support/**/*.ts"
-    ],
-
-    requireModule: [
-      "ts-node/register"
-    ],
-
+    require: ['steps/**/*.ts', 'support/**/*.ts'],
+    requireModule: ['ts-node/register'],
     format: [
-      "progress-bar",
-      "summary",
-      "json:reports/cucumber-report.json",
-      "html:reports/cucumber-report.html"
+      'progress',
+      'summary',
+      'json:reports/cucumber-report.json',
+      "allure-cucumberjs/reporter"
     ],
-
     formatOptions: {
-      colorsEnabled: true,
-      snippetInterface: "async-await"
+      colorsEnabled: true
     },
-
-    publishQuiet: true
+    publishQuiet: true,
+    worldParameters: {
+      snippetInterface: 'async-await'
+    }
   }
 };
