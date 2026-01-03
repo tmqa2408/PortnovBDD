@@ -1,580 +1,7 @@
 [
   {
-    "description": "",
-    "elements": [
-      {
-        "description": "",
-        "id": "to-test-home-page;i-validate-elements-on-home-page",
-        "keyword": "Scenario",
-        "line": 3,
-        "name": "I validate elements on home page",
-        "steps": [
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 1329634749
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 4,
-            "name": "User is on home page",
-            "match": {
-              "location": "steps/homepage.steps.ts:7"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 2379596750
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 5,
-            "name": "User can see a topic block title",
-            "match": {
-              "location": "steps/homepage.steps.ts:21"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 9175374
-            }
-          },
-          {
-            "keyword": "After",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 105054250
-            }
-          }
-        ],
-        "tags": [],
-        "type": "scenario"
-      },
-      {
-        "description": "",
-        "id": "to-test-home-page;verify-shearch-functionality",
-        "keyword": "Scenario",
-        "line": 8,
-        "name": "Verify Shearch functionality",
-        "steps": [
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 683320082
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 9,
-            "name": "User is on home page",
-            "match": {
-              "location": "steps/homepage.steps.ts:7"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1744912166
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 10,
-            "name": "Search button should be visible",
-            "match": {
-              "location": "steps/homepage.steps.ts:17"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 16000750
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 11,
-            "name": "User fills \"Test\" in the search field",
-            "match": {
-              "location": "steps/homepage.steps.ts:26"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 10347165
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 12,
-            "name": "click on the Search button",
-            "match": {
-              "location": "steps/homepage.steps.ts:30"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1540342792
-            }
-          },
-          {
-            "keyword": "After",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 95043792
-            }
-          }
-        ],
-        "tags": [],
-        "type": "scenario"
-      }
-    ],
-    "id": "to-test-home-page",
-    "line": 1,
-    "keyword": "Feature",
-    "name": "To test home page",
-    "tags": [],
-    "uri": "features/homepage/homepage.feature"
-  },
-  {
-    "description": "  As a new user\n  I want to register for an account\n  So that I can shop and track my orders on the nopCommerce store",
-    "elements": [
-      {
-        "description": "",
-        "id": "user-registration;successfully-navigate-to-registration-page-from-homepage",
-        "keyword": "Scenario",
-        "line": 10,
-        "name": "Successfully navigate to registration page from homepage",
-        "steps": [
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 537860832
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 7,
-            "name": "User is on home page",
-            "match": {
-              "location": "steps/homepage.steps.ts:7"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1779506792
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 11,
-            "name": "I am on the registration page",
-            "match": {
-              "location": "steps/registration.steps.ts:7"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 947985457
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 12,
-            "name": "I should see the registration form",
-            "match": {
-              "location": "steps/registration.steps.ts:45"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 587417
-            }
-          },
-          {
-            "keyword": "After",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 89071416
-            }
-          }
-        ],
-        "tags": [
-          {
-            "name": "@smoke",
-            "line": 9
-          },
-          {
-            "name": "@registration",
-            "line": 9
-          }
-        ],
-        "type": "scenario"
-      },
-      {
-        "description": "",
-        "id": "user-registration;register-with-valid-mandnatory-fields",
-        "keyword": "Scenario",
-        "line": 15,
-        "name": "Register with valid mandnatory fields",
-        "steps": [
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 650090792
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 7,
-            "name": "User is on home page",
-            "match": {
-              "location": "steps/homepage.steps.ts:7"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1722569666
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 16,
-            "name": "I am on the registration page",
-            "match": {
-              "location": "steps/registration.steps.ts:7"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 919168625
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 17,
-            "name": "I select Male as gender",
-            "match": {
-              "location": "steps/registration.steps.ts:13"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 30224625
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 18,
-            "name": "I enter \"John\" as first name",
-            "match": {
-              "location": "steps/registration.steps.ts:17"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 39753125
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 19,
-            "name": "I enter \"Doe\" as last name",
-            "match": {
-              "location": "steps/registration.steps.ts:21"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 9714874
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 20,
-            "name": "I enter \"john.doe@example.com\" as email",
-            "match": {
-              "location": "steps/registration.steps.ts:25"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 3990625
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 21,
-            "name": "I enter \"ValidPass123!\" as password",
-            "match": {
-              "location": "steps/registration.steps.ts:29"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 7190458
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 22,
-            "name": "I enter \"ValidPass123!\" as confirm password",
-            "match": {
-              "location": "steps/registration.steps.ts:33"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 4902917
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 23,
-            "name": "I click on the Register button",
-            "match": {
-              "location": "steps/registration.steps.ts:37"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 96031124
-            }
-          },
-          {
-            "keyword": "After",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 82708957
-            }
-          }
-        ],
-        "tags": [
-          {
-            "name": "@smoke",
-            "line": 14
-          },
-          {
-            "name": "@registration",
-            "line": 14
-          }
-        ],
-        "type": "scenario"
-      }
-    ],
-    "id": "user-registration",
-    "line": 1,
-    "keyword": "Feature",
-    "name": "User Registration",
-    "tags": [],
-    "uri": "features/homepage/registration.feature"
-  },
-  {
-    "description": "",
-    "elements": [
-      {
-        "description": "",
-        "id": "login-page-validation;verify-login-success",
-        "keyword": "Scenario",
-        "line": 3,
-        "name": "Verify login success",
-        "steps": [
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 559911374
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 4,
-            "name": "I am on the login page",
-            "match": {
-              "location": "steps/login.steps.ts:9"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1255597041
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 5,
-            "name": "I login with valid credentials",
-            "match": {
-              "location": "steps/login.steps.ts:14"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 482298917
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 6,
-            "name": "verify that the login is success",
-            "match": {
-              "location": "steps/login.steps.ts:19"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 23982832
-            }
-          },
-          {
-            "keyword": "After",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 81232500
-            }
-          }
-        ],
-        "tags": [],
-        "type": "scenario"
-      }
-    ],
-    "id": "login-page-validation",
-    "line": 1,
-    "keyword": "Feature",
-    "name": "Login page validation",
-    "tags": [],
-    "uri": "features/loginpage/login.feature"
-  },
-  {
     "description": "  As a user\n  I want to access and manage my wishlist\n  So that I can save items I'm interested in purchasing later",
     "elements": [
-      {
-        "description": "",
-        "id": "wishlist-functionality;navigate-to-wishlist-from-homepage-when-not-logged-in",
-        "keyword": "Scenario",
-        "line": 10,
-        "name": "Navigate to wishlist from homepage when not logged in",
-        "steps": [
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 471765250
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 7,
-            "name": "I am on the nopCommerce homepage",
-            "match": {
-              "location": "steps/wishlist.steps.ts:11"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1738036416
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 11,
-            "name": "I am not logged in",
-            "match": {
-              "location": "steps/wishlist.steps.ts:18"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 4997500
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 12,
-            "name": "I click on the \"Wishlist (0)\" link in the header",
-            "match": {
-              "location": "steps/wishlist.steps.ts:65"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 2022257625
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 13,
-            "name": "I should be redirected to the wishlist page",
-            "match": {
-              "location": "steps/wishlist.steps.ts:72"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 2812459
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 14,
-            "name": "the wishlist page URL should contain \"/wishlist\"",
-            "match": {
-              "location": "steps/wishlist.steps.ts:77"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 387042
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 15,
-            "name": "I should see the wishlist page",
-            "match": {
-              "location": "steps/wishlist.steps.ts:81"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 23929040
-            }
-          },
-          {
-            "keyword": "After",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 105433750
-            }
-          }
-        ],
-        "tags": [
-          {
-            "name": "@smoke",
-            "line": 9
-          },
-          {
-            "name": "@wishlist",
-            "line": 9
-          }
-        ],
-        "type": "scenario"
-      },
       {
         "description": "",
         "id": "wishlist-functionality;navigate-to-wishlist-from-homepage-when-logged-in",
@@ -587,7 +14,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 480474249
+              "duration": 1519468334
             }
           },
           {
@@ -600,7 +27,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1683382374
+              "duration": 1951844500
             }
           },
           {
@@ -613,7 +40,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1435295582
+              "duration": 1799692333
             }
           },
           {
@@ -622,11 +49,11 @@
             "line": 20,
             "name": "I click on the \"Wishlist\" link in the header",
             "match": {
-              "location": "steps/wishlist.steps.ts:65"
+              "location": "steps/wishlist.steps.ts:79"
             },
             "result": {
               "status": "passed",
-              "duration": 1441322667
+              "duration": 1449038584
             }
           },
           {
@@ -635,11 +62,11 @@
             "line": 21,
             "name": "I should be redirected to the wishlist page",
             "match": {
-              "location": "steps/wishlist.steps.ts:72"
+              "location": "steps/wishlist.steps.ts:86"
             },
             "result": {
               "status": "passed",
-              "duration": 1811083
+              "duration": 5209708
             }
           },
           {
@@ -648,11 +75,11 @@
             "line": 22,
             "name": "I should see my wishlist items if any exist",
             "match": {
-              "location": "steps/wishlist.steps.ts:113"
+              "location": "steps/wishlist.steps.ts:127"
             },
             "result": {
               "status": "passed",
-              "duration": 19228291
+              "duration": 25591207
             }
           },
           {
@@ -660,7 +87,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 86765749
+              "duration": 115534749
             }
           }
         ],

@@ -17,7 +17,7 @@ Given('I am on the nopCommerce homepage', async function () {
 // Common steps
 Given('I am not logged in', async function () {
   try {
-    const logoutLink = this.page.locator('a=Log out');
+    const logoutLink = this.page.locator('a:has-text("Log out")');
     if (await logoutLink.isVisible({ timeout: 2000 })) {
       await logoutLink.click();
       await this.page.waitForLoadState('networkidle');
@@ -42,13 +42,27 @@ Given('I am logged in', async function () {
     // If not logged in, proceed with login
     console.log('Attempting to log in...');
     await loginPage.open();
-    await loginPage.login(); // Uses default credentials from .env
+    await loginPage.login(); // Uses EMAIL and PASSWORD from .env
+    
+    console.log('After login, URL:', this.page.url());
+    console.log('Page title:', await this.page.title());
+    
+    // Check if login failed
+    if (this.page.url().includes('/login')) {
+      const errorMessage = await this.page.locator('.message-error').textContent({ timeout: 5000 }).catch(() => null);
+      if (errorMessage) {
+        throw new Error(`Login failed: ${errorMessage}`);
+      } else {
+        throw new Error('Login failed: Still on login page, no error message found');
+      }
+    }
     
     // Verify login was successful
-    await this.page.waitForSelector('text=My Account', { timeout: 10000 });
-    const accountText = await this.page.textContent('text=My Account');
-    expect(accountText).toContain("My account");
+    await this.page.waitForSelector('a:has-text("Log out")', { timeout: 30000 });
     console.log('Login successful');
+    
+    // Take a screenshot for debugging
+    await this.page.screenshot({ path: `screenshots/after-login-${Date.now()}.png` });
     
     // Initialize wishlist page
     wishlistPage = new WishlistPage(this.page);
