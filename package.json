@@ -9,13 +9,21 @@
   "scripts": {
     "test": "cucumber-js --config config/cucumber.js & npx cucumber-js --format json:reports/cucumber_report.json",
     "cucumber": "cucumber-js --config config/cucumber.js",
-    "report": "npx cucumber-js --format json:reports/cucumber_report.json",
-    "test:smoke": "cucumber-js --tags \"@smoke\""
+    "test:smoke": "cucumber-js --tags \"@smoke\"",
+    "allureResults": "allure serve allure-results",
+    "reportNode": "node reporter.js"
   },
   "devDependencies": {
     "@cucumber/cucumber": "^12.5.0",
+    "@cucumber/messages": "^31.1.0",
+    "@cucumber/pretty-formatter": "^2.4.1",
     "@playwright/test": "^1.57.0",
     "@types/node": "^25.0.3",
+    "@wdio/allure-reporter": "^9.22.0",
+    "allure-commandline": "^2.36.0",
+    "allure-cucumberjs": "^3.4.3",
+    "allure-js-commons": "^3.4.3",
+    "allure-playwright": "^3.4.3",
     "cucumber-html-reporter": "^6.0.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.3"

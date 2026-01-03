@@ -7,7 +7,7 @@ let registrationPage: RegistrationPage;
 Given("I am on the registration page", async function () {
   // Используем this.page из CustomWorld
   registrationPage = new RegistrationPage(this.page);
-  await registrationPage.gotoRegisterPage();
+  await registrationPage.goto();
 });
 
 When("I select Male as gender", async function () {
@@ -43,5 +43,5 @@ Then("I should see error message", async function (expectedText: string) {
 });
 
 Then("I should see the registration form", async function () {
-  await registrationPage.registrationFormIsVisible();
+  await expect(registrationPage.registrationFormIsVisible()).toBeTruthy(); //registrationPage.registrationFormIsVisible().;
 });

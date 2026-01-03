@@ -7,7 +7,7 @@ Feature: To test home page
 
   Scenario:  Verify Shearch functionality 
     Given User is on home page
-    Then Shearch button should be valisible
+    Then Search button should be visible
     When User fills "Test" in the search field
     Then click on the Search button
 

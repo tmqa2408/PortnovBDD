@@ -54,7 +54,7 @@
             "arguments": [],
             "keyword": "Then ",
             "line": 10,
-            "name": "Shearch button should be valisible",
+            "name": "Search button should be visible",
             "result": {
               "status": "undefined",
               "duration": 0
@@ -314,5 +314,166 @@
     "name": "Login page validation",
     "tags": [],
     "uri": "features/loginpage/login.feature"
+  },
+  {
+    "description": "  As a user\n  I want to access and manage my wishlist\n  So that I can save items I'm interested in purchasing later",
+    "elements": [
+      {
+        "description": "",
+        "id": "wishlist-functionality;navigate-to-wishlist-from-homepage-when-not-logged-in",
+        "keyword": "Scenario",
+        "line": 10,
+        "name": "Navigate to wishlist from homepage when not logged in",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I am on the nopCommerce homepage",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 11,
+            "name": "I am not logged in",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 12,
+            "name": "I click on the \"Wishlist (0)\" link in the header",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 13,
+            "name": "I should be redirected to the wishlist page",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 14,
+            "name": "the wishlist page URL should contain \"/wishlist\"",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 15,
+            "name": "I should see the wishlist page",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@smoke",
+            "line": 9
+          },
+          {
+            "name": "@wishlist",
+            "line": 9
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "wishlist-functionality;navigate-to-wishlist-from-homepage-when-logged-in",
+        "keyword": "Scenario",
+        "line": 18,
+        "name": "Navigate to wishlist from homepage when logged in",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I am on the nopCommerce homepage",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 19,
+            "name": "I am logged in",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 20,
+            "name": "I click on the \"Wishlist\" link in the header",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 21,
+            "name": "I should be redirected to the wishlist page",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 22,
+            "name": "I should see my wishlist items if any exist",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@smoke",
+            "line": 17
+          },
+          {
+            "name": "@wishlist",
+            "line": 17
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "wishlist-functionality",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Wishlist Functionality",
+    "tags": [],
+    "uri": "features/wishlistpage/wishlist.feature"
   }
 ]

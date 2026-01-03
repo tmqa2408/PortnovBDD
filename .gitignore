@@ -7,4 +7,20 @@ node_modules/
 /playwright/.cache/
 /playwright/.auth/
 .env/
+reports/
+screenshots/
+allure-results/
+index.js/
+allure-report/
+html-report/
+videos/
+trace/
+.debug/
+.vscode/
+screenshots/
+cucumber-report/
+logs/
+npm-debug.log*
+screenshots/
+reports/
 

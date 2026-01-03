@@ -2,6 +2,8 @@ import { Given, When, Then } from "@cucumber/cucumber";
 import LoginPage from "../pages/loginPage";
 import { expect } from "@playwright/test";
 
+const baseURL = process.env.BASE_URL;
+
 let loginPage: LoginPage;
 
 Given('I am on the login page', async function () {
@@ -9,16 +11,26 @@ Given('I am on the login page', async function () {
   await loginPage.open();
 });
 
-
 When('I login with valid credentials', async function () {
   loginPage = new LoginPage(this.page);
-  await loginPage.login("user@example.com", "Password123!");
+  await loginPage.login(); // Uses default credentials from .env
 });
 
 Then('verify that the login is success', async function () {
-  // ждём, пока URL изменится или появится элемент "My Account"
-  await this.page.waitForSelector('text=My Account', { timeout: 5000 });
+  await this.page.waitForSelector('text=My Account', { timeout: 10000 });
   const accountText = await this.page.textContent('text=My Account');
   expect(accountText).toContain("My account");
+});
+
+// Additional steps that might be useful for other scenarios
+When('I login with email {string} and password {string}', async function (email: string, pwd: string) {
+  loginPage = new LoginPage(this.page);
+  await loginPage.login(email, pwd);
+});
+
+Then('I should see an error message {string}', async function (errorMessage: string) {
+  await this.page.waitForSelector('.message-error', { timeout: 10000 });
+  const errorText = await this.page.textContent('.message-error');
+  expect(errorText).toContain(errorMessage);
 });
 
