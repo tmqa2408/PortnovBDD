@@ -17,9 +17,7 @@ When('I login with valid credentials', async function () {
 });
 
 Then('verify that the login is success', async function () {
-  await this.page.waitForSelector('text=My Account', { timeout: 10000 });
-  const accountText = await this.page.textContent('text=My Account');
-  expect(accountText).toContain("My account");
+  await this.page.waitForSelector('a:has-text("Log out")', { timeout: 10000 });
 });
 
 // Additional steps that might be useful for other scenarios

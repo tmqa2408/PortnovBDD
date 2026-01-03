@@ -1,8 +1,8 @@
 import { Page } from "@playwright/test";
 // import dotenv from "dotenv";
 // dotenv.config();
-const email = process.env.LOGIN_EMAIL || "";
-const password = process.env.LOGIN_PASSWORD || "";
+const email = process.env.EMAIL || "";
+const password = process.env.PASSWORD || "";
 const baseURL = process.env.BASE_URL || "";
 
 export default class LoginPage {
@@ -13,11 +13,16 @@ export default class LoginPage {
   }
 
   async login(loginEmail: string = email, loginPassword: string = password) {
+    console.log('Filling email:', loginEmail);
     await this.page.fill("#Email", loginEmail);
+    console.log('Filling password');
     await this.page.fill("#Password", loginPassword);
-    await this.page.click("button[type='submit']");
+    console.log('Clicking submit');
+    await this.page.locator("button.button-1.login-button").click();
     // Wait for login to complete
-    await this.page.waitForLoadState('networkidle');
+    console.log('Waiting for domcontentloaded');
+    await this.page.waitForLoadState('domcontentloaded');
+    console.log('DOMContentLoaded reached');
   }
 
   get getTitle() {

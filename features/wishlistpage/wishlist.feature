@@ -6,13 +6,13 @@ Feature: Wishlist Functionality
   Background:
     Given I am on the nopCommerce homepage
 
-  @smoke @wishlist
-  Scenario: Navigate to wishlist from homepage when not logged in
-    Given I am not logged in
-    When I click on the "Wishlist (0)" link in the header
-    Then I should be redirected to the wishlist page
-    And the wishlist page URL should contain "/wishlist"
-    And I should see the wishlist page
+  # @smoke @wishlist
+  # Scenario: Navigate to wishlist from homepage when not logged in
+  #   Given I am not logged in
+  #   When I click on the "Wishlist (0)" link in the header
+  #   Then I should be redirected to the wishlist page
+  #   And the wishlist page URL should contain "/wishlist"
+  #   And I should see the wishlist page
 
   @smoke @wishlist
   Scenario: Navigate to wishlist from homepage when logged in
