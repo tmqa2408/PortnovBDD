@@ -83,7 +83,7 @@ setWorldConstructor(CustomWorld);
 
 Before(async function (this: CustomWorld) {
   // Запуск браузера
-  this.browser = await chromium.launch({ headless: false });
+  this.browser = await chromium.launch({ headless: true });
 
   // Создание контекста БЕЗ видео
   this.context = await this.browser.newContext();
@@ -101,7 +101,6 @@ After(async function (this: CustomWorld, scenario: ITestCaseHookParameter) {
     if (!fs.existsSync(screenshotDir)) fs.mkdirSync(screenshotDir, { recursive: true });
     const screenshotPath = path.join(screenshotDir, `${scenarioNameSafe}.png`);
     await this.page.screenshot({ path: screenshotPath, fullPage: true });
-    console.log(`❌ Screenshot saved: ${screenshotPath}`);
   }
 
   // Закрываем ресурсы

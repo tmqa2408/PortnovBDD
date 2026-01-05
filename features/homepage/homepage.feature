@@ -1,10 +1,10 @@
 Feature: To test home page
-
+  @homepage @ui
   Scenario: I validate elements on home page
     Given User is on home page
     Then User can see a topic block title
 
-
+  @homepage @functionality
   Scenario:  Verify Shearch functionality 
     Given User is on home page
     Then Search button should be visible
