@@ -1,20 +1,20 @@
 [
   {
-    "description": "  As a user\n  I want to access and manage my wishlist\n  So that I can save items I'm interested in purchasing later",
+    "description": "  As a customer\n  I want to access and manage my wishlist\n  So that I can save items I'm interested in purchasing later",
     "elements": [
       {
         "description": "",
-        "id": "wishlist-functionality;navigate-to-wishlist-from-homepage-when-logged-in",
+        "id": "wishlist-management;navigate-to-wishlist-from-homepage-when-not-logged-in",
         "keyword": "Scenario",
-        "line": 18,
-        "name": "Navigate to wishlist from homepage when logged in",
+        "line": 9,
+        "name": "Navigate to wishlist from homepage when not logged in",
         "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 1519468334
+              "duration": 633049584
             }
           },
           {
@@ -23,63 +23,76 @@
             "line": 7,
             "name": "I am on the nopCommerce homepage",
             "match": {
-              "location": "steps/wishlist.steps.ts:11"
+              "location": "steps/wishlist.steps.ts:7"
             },
             "result": {
               "status": "passed",
-              "duration": 1951844500
+              "duration": 1461501499
             }
           },
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 19,
-            "name": "I am logged in",
+            "line": 10,
+            "name": "I am not logged in",
             "match": {
-              "location": "steps/wishlist.steps.ts:30"
+              "location": "steps/wishlist.steps.ts:12"
             },
             "result": {
               "status": "passed",
-              "duration": 1799692333
+              "duration": 19148499
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 20,
-            "name": "I click on the \"Wishlist\" link in the header",
+            "line": 11,
+            "name": "I click on the \"Wishlist (0)\" link in the header",
             "match": {
-              "location": "steps/wishlist.steps.ts:79"
+              "location": "steps/wishlist.steps.ts:236"
             },
             "result": {
               "status": "passed",
-              "duration": 1449038584
+              "duration": 1531837334
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 21,
+            "line": 12,
             "name": "I should be redirected to the wishlist page",
             "match": {
-              "location": "steps/wishlist.steps.ts:86"
+              "location": "steps/wishlist.steps.ts:241"
             },
             "result": {
               "status": "passed",
-              "duration": 5209708
+              "duration": 1750625
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 22,
-            "name": "I should see my wishlist items if any exist",
+            "line": 13,
+            "name": "the wishlist page URL should contain \"/wishlist\"",
             "match": {
-              "location": "steps/wishlist.steps.ts:127"
+              "location": "steps/wishlist.steps.ts:556"
             },
             "result": {
               "status": "passed",
-              "duration": 25591207
+              "duration": 251499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 14,
+            "name": "I should see the wishlist page",
+            "match": {
+              "location": "steps/wishlist.steps.ts:466"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2120709375
             }
           },
           {
@@ -87,27 +100,900 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 115534749
+              "duration": 24741417
             }
           }
         ],
         "tags": [
           {
             "name": "@smoke",
-            "line": 17
+            "line": 8
           },
           {
             "name": "@wishlist",
-            "line": 17
+            "line": 8
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "wishlist-management;navigate-to-wishlist-from-homepage-when-logged-in",
+        "keyword": "Scenario",
+        "line": 16,
+        "name": "Navigate to wishlist from homepage when logged in",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 167217166
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I am on the nopCommerce homepage",
+            "match": {
+              "location": "steps/wishlist.steps.ts:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1161716625
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 17,
+            "name": "I am logged in",
+            "match": {
+              "location": "steps/wishlist.steps.ts:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1328228791
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 18,
+            "name": "I click on the \"Wishlist\" link in the header",
+            "match": {
+              "location": "steps/wishlist.steps.ts:236"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 795124291
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 19,
+            "name": "I should be redirected to the wishlist page",
+            "match": {
+              "location": "steps/wishlist.steps.ts:241"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 940291
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 56305124
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@smoke",
+            "line": 15
+          },
+          {
+            "name": "@wishlist",
+            "line": 15
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "wishlist-management;verify-wishlist-item-count-displays-correctly-when-empty",
+        "keyword": "Scenario",
+        "line": 22,
+        "name": "Verify wishlist item count displays correctly when empty",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 207197083
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I am on the nopCommerce homepage",
+            "match": {
+              "location": "steps/wishlist.steps.ts:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1146822082
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 23,
+            "name": "I am not logged in",
+            "match": {
+              "location": "steps/wishlist.steps.ts:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 15897290
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 24,
+            "name": "I have no items in my wishlist",
+            "match": {
+              "location": "steps/wishlist.steps.ts:65"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 977503040
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 25,
+            "name": "I view the homepage header",
+            "match": {
+              "location": "steps/wishlist.steps.ts:74"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 117255999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 26,
+            "name": "I should see \"Wishlist (0)\" displayed",
+            "match": {
+              "location": "steps/wishlist.steps.ts:80"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 11437125
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 27,
+            "name": "the count should be \"0\"",
+            "match": {
+              "location": "steps/wishlist.steps.ts:87"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 16311499
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 19553292
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@wishlist",
+            "line": 21
+          },
+          {
+            "name": "@ui",
+            "line": 21
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "wishlist-management;add-product-to-wishlist-from-homepage-featured-products-(not-logged-in)",
+        "keyword": "Scenario",
+        "line": 29,
+        "name": "Add product to wishlist from homepage featured products (not logged in)",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 198281915
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I am on the nopCommerce homepage",
+            "match": {
+              "location": "steps/wishlist.steps.ts:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1200732458
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 30,
+            "name": "I am not logged in",
+            "match": {
+              "location": "steps/wishlist.steps.ts:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 19878917
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 31,
+            "name": "I am on the homepage",
+            "match": {
+              "location": "steps/wishlist.steps.ts:40"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 126475082
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 32,
+            "name": "my wishlist is empty",
+            "match": {
+              "location": "steps/wishlist.steps.ts:47"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1100066333
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 33,
+            "name": "I click \"Add to wishlist\" button for \"Build your own computer\"",
+            "match": {
+              "location": "steps/wishlist.steps.ts:93"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5009727208
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 34,
+            "name": "the product should be added to my wishlist",
+            "match": {
+              "location": "steps/wishlist.steps.ts:103"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 14838916
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 35,
+            "name": "the wishlist count should increase by 1",
+            "match": {
+              "location": "steps/wishlist.steps.ts:115"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4497834
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 17284833
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@wishlist",
+            "line": 28
+          },
+          {
+            "name": "@functionality",
+            "line": 28
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "wishlist-management;add-product-to-wishlist-from-homepage-when-logged-in",
+        "keyword": "Scenario",
+        "line": 38,
+        "name": "Add product to wishlist from homepage when logged in",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 207819250
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I am on the nopCommerce homepage",
+            "match": {
+              "location": "steps/wishlist.steps.ts:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1135191792
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 39,
+            "name": "I am logged in",
+            "match": {
+              "location": "steps/wishlist.steps.ts:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1464646833
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 40,
+            "name": "I am on the homepage",
+            "match": {
+              "location": "steps/wishlist.steps.ts:40"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 124082249
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 41,
+            "name": "my wishlist is empty",
+            "match": {
+              "location": "steps/wishlist.steps.ts:47"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1142528457
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 42,
+            "name": "I click \"Add to wishlist\" button for \"Apple MacBook Pro 13-inch\"",
+            "match": {
+              "location": "steps/wishlist.steps.ts:93"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4815683583
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 43,
+            "name": "the product should be added to my wishlist",
+            "match": {
+              "location": "steps/wishlist.steps.ts:103"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 21313333
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 44,
+            "name": "the wishlist count should increase by 2",
+            "match": {
+              "location": "steps/wishlist.steps.ts:115"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 16517374
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 43062915
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@wishlist",
+            "line": 37
+          },
+          {
+            "name": "@functionality",
+            "line": 37
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "wishlist-management;view-empty-wishlist-page",
+        "keyword": "Scenario",
+        "line": 47,
+        "name": "View empty wishlist page",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 190655083
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I am on the nopCommerce homepage",
+            "match": {
+              "location": "steps/wishlist.steps.ts:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1162947417
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 48,
+            "name": "I am logged in",
+            "match": {
+              "location": "steps/wishlist.steps.ts:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1276276458
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 49,
+            "name": "my wishlist is empty",
+            "match": {
+              "location": "steps/wishlist.steps.ts:47"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2299200874
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 50,
+            "name": "I navigate to the wishlist page",
+            "match": {
+              "location": "steps/wishlist.steps.ts:153"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 619609124
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 51,
+            "name": "I should see a message \"The wishlist is empty\" or similar",
+            "match": {
+              "location": "steps/wishlist.steps.ts:159"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5029499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 52,
+            "name": "I should see a link to continue shopping",
+            "match": {
+              "location": "steps/wishlist.steps.ts:164"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1262249
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 53,
+            "name": "no products should be displayed",
+            "match": {
+              "location": "steps/wishlist.steps.ts:169"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1178291
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 17898457
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@wishlist",
+            "line": 46
+          },
+          {
+            "name": "@functionality",
+            "line": 46
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "wishlist-management;view-wishlist-with-multiple-items",
+        "keyword": "Scenario",
+        "line": 56,
+        "name": "View wishlist with multiple items",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 178362124
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I am on the nopCommerce homepage",
+            "match": {
+              "location": "steps/wishlist.steps.ts:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1172173583
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 57,
+            "name": "I am logged in",
+            "match": {
+              "location": "steps/wishlist.steps.ts:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1300499541
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 58,
+            "name": "my wishlist is empty",
+            "match": {
+              "location": "steps/wishlist.steps.ts:47"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1053588583
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "Product Name",
+                      "Price"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Build your own computer",
+                      "$1,200.00"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Apple MacBook Pro 13-inch",
+                      "$1,800.00"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "And ",
+            "line": 59,
+            "name": "I have the following items in my wishlist:",
+            "match": {
+              "location": "steps/wishlist.steps.ts:175"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9564003583
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 63,
+            "name": "I navigate to the wishlist page",
+            "match": {
+              "location": "steps/wishlist.steps.ts:153"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 628336042
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 64,
+            "name": "I should see all 2 items displayed",
+            "match": {
+              "location": "steps/wishlist.steps.ts:197"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 11895958
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 65,
+            "name": "each item should show its name, price, and image",
+            "match": {
+              "location": "steps/wishlist.steps.ts:203"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7544917
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 66,
+            "name": "the wishlist should have 2 items",
+            "match": {
+              "location": "steps/wishlist.steps.ts:214"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7431916
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 20012499
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@wishlist",
+            "line": 55
+          },
+          {
+            "name": "@functionality",
+            "line": 55
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "wishlist-management;add-item-to-cart-from-wishlist",
+        "keyword": "Scenario",
+        "line": 69,
+        "name": "Add item to cart from wishlist",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 188190666
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I am on the nopCommerce homepage",
+            "match": {
+              "location": "steps/wishlist.steps.ts:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2372312916
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 70,
+            "name": "I am logged in",
+            "match": {
+              "location": "steps/wishlist.steps.ts:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3019601916
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 71,
+            "name": "my wishlist is empty",
+            "match": {
+              "location": "steps/wishlist.steps.ts:47"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3461737292
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 72,
+            "name": "\"Apple MacBook Pro 13-inch\" is in my wishlist",
+            "match": {
+              "location": "steps/wishlist.steps.ts:220"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5217686583
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 73,
+            "name": "I navigate to the wishlist page",
+            "match": {
+              "location": "steps/wishlist.steps.ts:153"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 627388750
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 74,
+            "name": "I click \"Add to cart\" for \"Apple MacBook Pro 13-inch\"",
+            "match": {
+              "location": "steps/wishlist.steps.ts:132"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3150679750
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 75,
+            "name": "the item should be added to my shopping cart",
+            "match": {
+              "location": "steps/wishlist.steps.ts:137"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 845832
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 25330707
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@wishlist",
+            "line": 68
+          },
+          {
+            "name": "@functionality",
+            "line": 68
           }
         ],
         "type": "scenario"
       }
     ],
-    "id": "wishlist-functionality",
+    "id": "wishlist-management",
     "line": 1,
     "keyword": "Feature",
-    "name": "Wishlist Functionality",
+    "name": "Wishlist Management",
     "tags": [],
     "uri": "features/wishlistpage/wishlist.feature"
   }

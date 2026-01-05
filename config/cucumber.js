@@ -8,14 +8,16 @@ module.exports = {
       'progress',
       'summary',
       'json:reports/cucumber-report.json',
-      "allure-cucumberjs/reporter"
+      'html:reports/cucumber-report.html',
+      '"allure-cucumberjs/reporter"'
     ],
     formatOptions: {
-      colorsEnabled: true
+      colorsEnabled: true,
     },
     publishQuiet: true,
     worldParameters: {
       snippetInterface: 'async-await'
-    }
+    },
+    timeout: 120000
   }
 };

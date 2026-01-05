@@ -6,7 +6,7 @@ export default class HomePage {
 
   async goto() {
     await this.page.goto(baseURL);
-    await this.page.waitForLoadState('networkidle');
+    await this.page.waitForLoadState('domcontentloaded');
   }
 
   get logo() {

@@ -30,7 +30,16 @@
             }
           }
         ],
-        "tags": [],
+        "tags": [
+          {
+            "name": "@homepage",
+            "line": 2
+          },
+          {
+            "name": "@ui",
+            "line": 2
+          }
+        ],
         "type": "scenario"
       },
       {
@@ -81,7 +90,16 @@
             }
           }
         ],
-        "tags": [],
+        "tags": [
+          {
+            "name": "@homepage",
+            "line": 7
+          },
+          {
+            "name": "@functionality",
+            "line": 7
+          }
+        ],
         "type": "scenario"
       }
     ],
@@ -270,13 +288,13 @@
         "description": "",
         "id": "login-page-validation;verify-login-success",
         "keyword": "Scenario",
-        "line": 3,
+        "line": 5,
         "name": "Verify login success",
         "steps": [
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 4,
+            "line": 6,
             "name": "I am on the login page",
             "result": {
               "status": "undefined",
@@ -286,7 +304,7 @@
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 5,
+            "line": 7,
             "name": "I login with valid credentials",
             "result": {
               "status": "undefined",
@@ -296,7 +314,7 @@
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 6,
+            "line": 8,
             "name": "verify that the login is success",
             "result": {
               "status": "undefined",
@@ -304,7 +322,12 @@
             }
           }
         ],
-        "tags": [],
+        "tags": [
+          {
+            "name": "@login",
+            "line": 4
+          }
+        ],
         "type": "scenario"
       }
     ],
@@ -316,13 +339,13 @@
     "uri": "features/loginpage/login.feature"
   },
   {
-    "description": "  As a user\n  I want to access and manage my wishlist\n  So that I can save items I'm interested in purchasing later",
+    "description": "  As a customer\n  I want to access and manage my wishlist\n  So that I can save items I'm interested in purchasing later",
     "elements": [
       {
         "description": "",
-        "id": "wishlist-functionality;navigate-to-wishlist-from-homepage-when-not-logged-in",
+        "id": "wishlist-management;navigate-to-wishlist-from-homepage-when-not-logged-in",
         "keyword": "Scenario",
-        "line": 10,
+        "line": 9,
         "name": "Navigate to wishlist from homepage when not logged in",
         "steps": [
           {
@@ -338,7 +361,7 @@
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 11,
+            "line": 10,
             "name": "I am not logged in",
             "result": {
               "status": "undefined",
@@ -348,7 +371,7 @@
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 12,
+            "line": 11,
             "name": "I click on the \"Wishlist (0)\" link in the header",
             "result": {
               "status": "undefined",
@@ -358,7 +381,7 @@
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 13,
+            "line": 12,
             "name": "I should be redirected to the wishlist page",
             "result": {
               "status": "undefined",
@@ -368,7 +391,7 @@
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 14,
+            "line": 13,
             "name": "the wishlist page URL should contain \"/wishlist\"",
             "result": {
               "status": "undefined",
@@ -378,7 +401,7 @@
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 15,
+            "line": 14,
             "name": "I should see the wishlist page",
             "result": {
               "status": "undefined",
@@ -389,20 +412,20 @@
         "tags": [
           {
             "name": "@smoke",
-            "line": 9
+            "line": 8
           },
           {
             "name": "@wishlist",
-            "line": 9
+            "line": 8
           }
         ],
         "type": "scenario"
       },
       {
         "description": "",
-        "id": "wishlist-functionality;navigate-to-wishlist-from-homepage-when-logged-in",
+        "id": "wishlist-management;navigate-to-wishlist-from-homepage-when-logged-in",
         "keyword": "Scenario",
-        "line": 18,
+        "line": 16,
         "name": "Navigate to wishlist from homepage when logged in",
         "steps": [
           {
@@ -418,7 +441,7 @@
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 19,
+            "line": 17,
             "name": "I am logged in",
             "result": {
               "status": "undefined",
@@ -428,7 +451,7 @@
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 20,
+            "line": 18,
             "name": "I click on the \"Wishlist\" link in the header",
             "result": {
               "status": "undefined",
@@ -438,18 +461,8 @@
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 21,
+            "line": 19,
             "name": "I should be redirected to the wishlist page",
-            "result": {
-              "status": "undefined",
-              "duration": 0
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 22,
-            "name": "I should see my wishlist items if any exist",
             "result": {
               "status": "undefined",
               "duration": 0
@@ -459,20 +472,583 @@
         "tags": [
           {
             "name": "@smoke",
-            "line": 17
+            "line": 15
           },
           {
             "name": "@wishlist",
-            "line": 17
+            "line": 15
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "wishlist-management;verify-wishlist-item-count-displays-correctly-when-empty",
+        "keyword": "Scenario",
+        "line": 22,
+        "name": "Verify wishlist item count displays correctly when empty",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I am on the nopCommerce homepage",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 23,
+            "name": "I am not logged in",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 24,
+            "name": "I have no items in my wishlist",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 25,
+            "name": "I view the homepage header",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 26,
+            "name": "I should see \"Wishlist (0)\" displayed",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 27,
+            "name": "the count should be \"0\"",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@wishlist",
+            "line": 21
+          },
+          {
+            "name": "@ui",
+            "line": 21
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "wishlist-management;add-product-to-wishlist-from-homepage-featured-products-(not-logged-in)",
+        "keyword": "Scenario",
+        "line": 29,
+        "name": "Add product to wishlist from homepage featured products (not logged in)",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I am on the nopCommerce homepage",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 30,
+            "name": "I am not logged in",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 31,
+            "name": "I am on the homepage",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 32,
+            "name": "my wishlist is empty",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 33,
+            "name": "I click \"Add to wishlist\" button for \"Build your own computer\"",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 34,
+            "name": "the product should be added to my wishlist",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 35,
+            "name": "the wishlist count should increase by 1",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@wishlist",
+            "line": 28
+          },
+          {
+            "name": "@functionality",
+            "line": 28
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "wishlist-management;add-product-to-wishlist-from-homepage-when-logged-in",
+        "keyword": "Scenario",
+        "line": 38,
+        "name": "Add product to wishlist from homepage when logged in",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I am on the nopCommerce homepage",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 39,
+            "name": "I am logged in",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 40,
+            "name": "I am on the homepage",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 41,
+            "name": "my wishlist is empty",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 42,
+            "name": "I click \"Add to wishlist\" button for \"Apple MacBook Pro 13-inch\"",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 43,
+            "name": "the product should be added to my wishlist",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 44,
+            "name": "the wishlist count should increase by 2",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@wishlist",
+            "line": 37
+          },
+          {
+            "name": "@functionality",
+            "line": 37
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "wishlist-management;view-empty-wishlist-page",
+        "keyword": "Scenario",
+        "line": 47,
+        "name": "View empty wishlist page",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I am on the nopCommerce homepage",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 48,
+            "name": "I am logged in",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 49,
+            "name": "my wishlist is empty",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 50,
+            "name": "I navigate to the wishlist page",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 51,
+            "name": "I should see a message \"The wishlist is empty\" or similar",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 52,
+            "name": "I should see a link to continue shopping",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 53,
+            "name": "no products should be displayed",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@wishlist",
+            "line": 46
+          },
+          {
+            "name": "@functionality",
+            "line": 46
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "wishlist-management;view-wishlist-with-multiple-items",
+        "keyword": "Scenario",
+        "line": 56,
+        "name": "View wishlist with multiple items",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I am on the nopCommerce homepage",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 57,
+            "name": "I am logged in",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 58,
+            "name": "my wishlist is empty",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "Product Name",
+                      "Price"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Build your own computer",
+                      "$1,200.00"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Apple MacBook Pro 13-inch",
+                      "$1,800.00"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "And ",
+            "line": 59,
+            "name": "I have the following items in my wishlist:",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 63,
+            "name": "I navigate to the wishlist page",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 64,
+            "name": "I should see all 2 items displayed",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 65,
+            "name": "each item should show its name, price, and image",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 66,
+            "name": "the wishlist should have 2 items",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@wishlist",
+            "line": 55
+          },
+          {
+            "name": "@functionality",
+            "line": 55
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "wishlist-management;add-item-to-cart-from-wishlist",
+        "keyword": "Scenario",
+        "line": 69,
+        "name": "Add item to cart from wishlist",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I am on the nopCommerce homepage",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 70,
+            "name": "I am logged in",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 71,
+            "name": "my wishlist is empty",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 72,
+            "name": "\"Apple MacBook Pro 13-inch\" is in my wishlist",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 73,
+            "name": "I navigate to the wishlist page",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 74,
+            "name": "I click \"Add to cart\" for \"Apple MacBook Pro 13-inch\"",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 75,
+            "name": "the item should be added to my shopping cart",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@wishlist",
+            "line": 68
+          },
+          {
+            "name": "@functionality",
+            "line": 68
           }
         ],
         "type": "scenario"
       }
     ],
-    "id": "wishlist-functionality",
+    "id": "wishlist-management",
     "line": 1,
     "keyword": "Feature",
-    "name": "Wishlist Functionality",
+    "name": "Wishlist Management",
     "tags": [],
     "uri": "features/wishlistpage/wishlist.feature"
   }

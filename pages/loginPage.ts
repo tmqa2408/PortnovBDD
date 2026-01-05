@@ -12,17 +12,19 @@ export default class LoginPage {
     await this.page.goto(`${baseURL}/login`);
   }
 
-  async login(loginEmail: string = email, loginPassword: string = password) {
-    console.log('Filling email:', loginEmail);
+  async goto() {
+    await this.open();
+  }
+
+  async login(loginEmail: string = email, loginPassword: string = password): Promise<boolean> {
     await this.page.fill("#Email", loginEmail);
-    console.log('Filling password');
     await this.page.fill("#Password", loginPassword);
-    console.log('Clicking submit');
-    await this.page.locator("button.button-1.login-button").click();
+    await this.page.locator('button.button-1.login-button').click();
     // Wait for login to complete
-    console.log('Waiting for domcontentloaded');
     await this.page.waitForLoadState('domcontentloaded');
-    console.log('DOMContentLoaded reached');
+    // Check if login was successful
+    const logoutLink = this.page.locator('a[href="/logout"]');
+    return await logoutLink.isVisible({ timeout: 5000 });
   }
 
   get getTitle() {
